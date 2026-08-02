@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/terminal_toolbar_drawer_button"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="4dp"
+        android:backgroundTint="?attr/extraKeysButtonDefaultBg"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="☰"
+        android:textColor="?attr/extraKeysButtonTextColor"
+        android:textSize="20sp"
+        app:cornerRadius="100dp" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingEnd="4dp">
+
+        <com.termux.shared.termux.extrakeys.ExtraKeysView
+            android:id="@+id/terminal_toolbar_extra_keys"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+</LinearLayout>
